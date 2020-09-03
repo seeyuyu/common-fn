@@ -1,5 +1,11 @@
 // 时间格式化
 function timeFormat(times) {
+    if(!times){
+        return false
+    }
+    if (times.indexOf('T') > 0) { //去除时分
+        times = times.substring(0, times.indexOf('T'))
+    }
     if (times.indexOf(' ') > 0) { //去除时分
         times = times.substring(0, times.indexOf(' '))
     }
